@@ -86,7 +86,7 @@ module.exports = (common, options) => {
       const testFileName = hat()
       const [{
         cid
-      }] = await ipfs.add({ path: `/test/${testFileName}`, content: fixtures.smallFile.data })
+      }] = await all(ipfs.add({ path: `/test/${testFileName}`, content: fixtures.smallFile.data }))
       const listing = await all(ipfs.files.ls('/ipfs/' + cid))
       expect(listing).to.have.length(1)
       expect(listing[0].name).to.equal(cid.toString())
