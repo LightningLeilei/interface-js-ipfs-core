@@ -3,7 +3,6 @@
 
 const { fixtures } = require('./utils')
 const { getDescribe, getIt, expect } = require('./utils/mocha')
-const CID = require('cids')
 const all = require('it-all')
 
 const randomName = prefix => `${prefix}${Math.round(Math.random() * 1000)}`
