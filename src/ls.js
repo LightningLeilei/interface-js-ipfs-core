@@ -60,7 +60,7 @@ module.exports = (common, options) => {
       expect(output[0].name).to.equal('alice.txt')
       expect(output[0].path).to.equal('QmVvjDy7yF7hdnqE8Hrf4MHo5ABDtb5AbX6hWbD3Y42bXP/alice.txt')
       expect(output[0].size).to.equal(11685)
-      expect(output[1].cid.toString()).to.equal('QmZyUEQVuRK3XV7L9Dk26pg6RVSgaYkiSTEdnT2kZZdwoi')
+      expect(output[0].cid.toString()).to.equal('QmZyUEQVuRK3XV7L9Dk26pg6RVSgaYkiSTEdnT2kZZdwoi')
       expect(output[0].type).to.equal('file')
 
       expect(output[1].depth).to.equal(1)
