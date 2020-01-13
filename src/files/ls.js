@@ -3,7 +3,7 @@
 
 const hat = require('hat')
 const all = require('it-all')
-const { fixtures } = require('../files-regular/utils')
+const { fixtures } = require('../utils')
 const { getDescribe, getIt, expect } = require('../utils/mocha')
 
 /** @typedef { import("ipfsd-ctl/src/factory") } Factory */
@@ -49,7 +49,7 @@ module.exports = (common, options) => {
       expect(entries[1].cid.toString()).to.equal('QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn')
     })
 
-    it('ls directory with long option should include metadata', async () => {
+    it('should ls directory and include metadata', async () => {
       const testDir = `/test-${hat()}`
 
       await ipfs.files.mkdir(`${testDir}/lv1`, {
