@@ -118,13 +118,13 @@ module.exports = (common, options) => {
       }
 
       const [{
-        hash
-      }] = await ipfs.add({
+        cid
+      }] = await all(ipfs.add({
         content: fixtures.smallFile.data,
         mode,
         mtime
-      })
-      await ipfs.files.cp(`/ipfs/${hash}`, testDestPath)
+      }))
+      await ipfs.files.cp(`/ipfs/${cid}`, testDestPath)
 
       const stats = await ipfs.files.stat(testDestPath)
       expect(stats).to.have.deep.property('mtime', expectedMtime)
