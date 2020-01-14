@@ -111,8 +111,8 @@ module.exports = (common, options) => {
       expect(entries).to.have.lengthOf(1)
       expect(entries[0].name).to.equal(fileName)
       expect(entries[0].type).to.equal(0)
-      expect(entries[0].size).to.equal(0)
-      expect(entries[0].cid.toString()).to.equal('')
+      expect(entries[0].size).to.equal(11)
+      expect(entries[0].cid.toString()).to.equal('Qmetpc7cZmN25Wcc6R27cGCAvCDqCS5GjHG4v7xABEfpmJ')
     })
   })
 }
