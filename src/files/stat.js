@@ -65,7 +65,6 @@ module.exports = (common, options) => {
         type: 'directory',
         blocks: 1,
         size: 0,
-        cid: 'QmQGn7EvzJZRbhcwHrp4UeMeS56WsLmrey9JhfkymjzXQu',
         cumulativeSize: 118,
         withLocality: false
       })
