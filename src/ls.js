@@ -186,7 +186,7 @@ module.exports = (common, options) => {
       ]
 
       const res = await all(ipfs.add(input))
-      const output = await all(ipfs.ls(`/ipfs/${res[res.length - 1].hash}`))
+      const output = await all(ipfs.ls(`/ipfs/${res[res.length - 1].cid}`))
 
       expect(output).to.have.lengthOf(input.length)
       expect(output[0].mtime).to.deep.equal(expectedMtime)
