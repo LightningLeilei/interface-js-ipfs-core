@@ -163,7 +163,7 @@ module.exports = (common, options) => {
         .to.match(/\/ipns\/.+\/images\/ipfs-logo.svg$/)
     })
 
-    it('should resolve /ipns/ipfs.io with remainder  recursive === true', async () => {
+    it('should resolve /ipns/ipfs.io with remainder recursive === true', async () => {
       expect(await last(ipfs.name.resolve('/ipns/ipfs.io/images/ipfs-logo.svg', { recursive: true })))
         .to.match(/\/ipfs\/.+\/images\/ipfs-logo.svg$/)
     })
